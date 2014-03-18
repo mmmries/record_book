@@ -15,6 +15,8 @@ ActiveRecord::Schema.define(version: 20140318033953) do
   create_table "course_records", force: true do |t|
     t.integer  "course_id"
     t.integer  "place"
+    t.integer  "score"
+    t.datetime "played_at"
     t.integer  "game_id"
     t.integer  "score_id"
     t.integer  "player_id"

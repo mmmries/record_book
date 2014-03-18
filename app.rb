@@ -3,6 +3,7 @@ Bundler.require
 
 require_relative "models/course_record"
 require_relative "models/game"
+require_relative "models/record_keeper"
 
 Rabl.register!
 

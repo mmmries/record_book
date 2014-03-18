@@ -13,7 +13,7 @@ end
 
 post "/game.json" do
   game = Game.new(JSON.parse(request.body.read))
-
+  # update
   status 200
   body ""
 end

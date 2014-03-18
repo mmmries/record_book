@@ -8,3 +8,7 @@ gem "sinatra", "~> 1.4"
 gem "sinatra-activerecord", "~> 1.4"
 gem "sqlite3", "~> 1.3"
 gem "virtus", "~> 1.0"
+
+group :test do
+  gem "rspec-given"
+end

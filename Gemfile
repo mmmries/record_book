@@ -10,5 +10,6 @@ gem "sqlite3", "~> 1.3"
 gem "virtus", "~> 1.0"
 
 group :test do
+  gem "pry"
   gem "rspec-given"
 end

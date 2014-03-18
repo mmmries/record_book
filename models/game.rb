@@ -21,6 +21,14 @@ class Score
   attribute :hole16, Integer
   attribute :hole17, Integer
   attribute :hole18, Integer
+
+  def holes
+    attributes.select{|k,v| k.to_s.starts_with?("hole")}.map{ |k,v| v }.compact
+  end
+
+  def total
+    @total ||= holes.sum
+  end
 end
 
 class Game

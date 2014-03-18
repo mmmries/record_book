@@ -2,7 +2,7 @@ class CreateCourseRecords < ActiveRecord::Migration
   def change
     create_table :course_records do |t|
       t.integer :course_id
-      t.integer :place
+      t.integer :rank
       t.integer :score
       t.datetime :played_at
       t.integer :game_id

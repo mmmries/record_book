@@ -1,5 +1,4 @@
 require 'spec_helper'
-require_relative '../../app'
 
 describe RecordKeeper do
   Given(:keeper){ described_class.new(current_records, game) }
@@ -43,21 +42,21 @@ describe RecordKeeper do
     When{ keeper.update_records }
     Then{ CourseRecord.count.should == 2 }
     Then do
-      first_place = CourseRecord.where(:course_id => 2, :place => 1).first!
+      first_place = CourseRecord.where(:course_id => 2, :rank => 1).first!
       first_place.player_id.should == 2
-      first_place.total.should == 17
+      first_place.score.should == 17
       first_place.score_id.should == 2
       first_place.game_id.should == 1
       first_place.played_at.should == game.played_at
     end
 
     Then do
-      second_place = CourseRecord.where(:course_id => 2, :place => 2).first!
-      first_place.player_id.should == 1
-      first_place.total.should == 18
-      first_place.score_id.should == 1
-      first_place.game_id.should == 1
-      first_place.played_at.should == game.played_at
+      second_place = CourseRecord.where(:course_id => 2, :rank => 2).first!
+      second_place.player_id.should == 1
+      second_place.score.should == 18
+      second_place.score_id.should == 1
+      second_place.game_id.should == 1
+      second_place.played_at.should == game.played_at
     end
   end
 end

@@ -2,6 +2,7 @@
 source "https://rubygems.org"
 
 gem "puma", "~> 2.8"
+gem "rabl", "~> 0.9"
 gem "rake", "~> 10.1"
 gem "sinatra", "~> 1.4"
 gem "sinatra-activerecord", "~> 1.4"

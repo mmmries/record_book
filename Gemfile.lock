@@ -24,6 +24,8 @@ GEM
     multi_json (1.9.0)
     puma (2.8.0)
       rack (>= 1.1, < 2.0)
+    rabl (0.9.3)
+      activesupport (>= 2.3.14)
     rack (1.5.2)
     rack-protection (1.5.2)
       rack
@@ -46,6 +48,7 @@ PLATFORMS
 
 DEPENDENCIES
   puma (~> 2.8)
+  rabl (~> 0.9)
   rake (~> 10.1)
   sinatra (~> 1.4)
   sinatra-activerecord (~> 1.4)
